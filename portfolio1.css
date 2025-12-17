@@ -318,7 +318,12 @@ img {
 }
 
 .service-box {
-  background: #f0f0f0;
+  background: linear-gradient(
+    135deg,
+    #020b1c 0%,
+    #04152d 40%,
+    #042f3f 100%
+  );
   padding: 25px;
   border-radius: 15px;
   text-align: center;
@@ -334,7 +339,10 @@ img {
   color: #38bdf8;
   margin-bottom: 10px;
 }
-
+.service-box p {
+  color: #fff;
+  margin-bottom: 10px;
+}
 .service-box a {
   display: inline-block;
   padding: 10px 20px;
@@ -351,7 +359,6 @@ img {
   background-color: #0ea5e9;
   transform: translateY(-2px);
 }
-
 
 /*=========certificates===*/
 .certificate__caption {
@@ -574,3 +581,4 @@ img {
   object-fit: cover;
   background: #000;
 }
+
