@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Resume Challenge</title>
+    <link rel="stylesheet" href="new.css" />
+    <link
+      href="https://cdn.boxicons.com/3.0.3/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">Cloud Resume Challenge</a>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+		<a href="#team">Our Team</a>
+        <a href="#aws">AWS Services</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#features">Features</a>
+      </nav>
+    </header>
+    <main>
+      <section class="home" id="home">
+        <div class="home-content">
+          <h1>Cloud Resume Challenge</h1>
+          <h3 class="text-animation">Group Project on <span>AWS Cloud</span></h3>
+
+          <p>
+            This project demonstrates a cloud-hosted resume website built using
+            AWS serverless architecture, CI/CD pipelines, and infrastructure as code.
+            It follows industry best practices for scalability, security, and automation.
+          </p>
+          <div class="btn-visitor-group" style="display:flex; justify-content:center; gap:20px; align-items:center; margin-top:20px;">
+            <a href="#architecture" class="btn">View Architecture</a>
+            <a href="#team" class="btn">Our Team</a>
+            <div class="visitor-card" style="background-color:#1e1e2f; color:white; padding:15px 25px; border-radius:12px; text-align:center; box-shadow:0 4px 8px rgba(0,0,0,0.2); min-width:120px;">
+        <p style="margin:0; font-size:14px;">Visitors</p>
+        <p id="visitorCount" style="margin:5px 0 0; font-size:24px; font-weight:bold;">0</p>
+        <button id="visitorBtn" class="btn" style="margin-top:10px; padding:5px 10px; font-size:14px;">Show Count</button>
+      </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="testimonials" id="team">
+        <div class="testimonials-box">
+          <h2 class="heading">Meet Our Team Members</h2>
+
+          <div class="wrapper">
+            <div class="testimonials-item">
+              <h2>Sreejita Karmakar</h2>
+			  <br>
+			  <img src="sreejita.jpeg" alt="Member 1">
+              <p>AWS & CloudFront</p>
+              <a href="demo.html" class="btn" target="_blank">
+              View Resume
+             </a>
+
+            </div>
+
+            <div class="testimonials-item">
+              <h2>Aritri Bose</h2>
+			  <br>
+			  <img src="aritri.jpeg" alt="Member 2">
+              <p>Frontend Developer</p>
+              <a href="resume-aritri.html" class="btn" target="_blank">
+              View Resume
+             </a>
+            </div>
+            
+            <div class="testimonials-item">
+              <h2>Karra Lawanya</h2>
+			  <br>
+			  <img src="lawanya.jpeg" alt="Member 2">
+              <p>Lambda & API Gateway</p>
+              <a href="resume-sreejita.html" class="btn" target="_blank">
+              View Resume
+             </a>
+            </div>
+            
+            <div class="testimonials-item">
+              <h2>Ankita Dutta</h2>
+			  <br>
+			  <img src="ankita.jpeg" alt="Member 2">
+              <p>Lambda & API Gateway</p>
+              <a href="resume-sreejita.html" class="btn" target="_blank">
+              View Resume
+             </a>
+            </div>
+            
+            <div class="testimonials-item">
+              <h2>Saptak Patari</h2>
+			  <br>
+			  <img src="saptak.jpeg" alt="Member 2">
+              <p>AWS & CloudFront</p>
+              <a href="resume-sreejita.html" class="btn" target="_blank">
+              View Resume
+             </a>
+            </div>
+            
+            <div class="testimonials-item">
+              <h2>Ravindranath Thakur</h2>
+			  <br>
+			  <img src="rnt.jpg" alt="Member 2">
+              <p>AWS & CloudFront</p>
+              <a href="resume-sreejita.html" class="btn" target="_blank">
+              View Resume
+             </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="aws">
+  <h2 class="heading">AWS Services Used</h2>
+
+  <div class="services-container">
+    <div class="service-box">
+      <h4>Amazon S3</h4>
+      <p>Hosts the static resume website.</p>
+    </div>
+
+    <div class="service-box">
+      <h4>CloudFront</h4>
+      <p>Provides CDN and HTTPS security.</p>
+    </div>
+
+    <div class="service-box">
+      <h4>Lambda</h4>
+      <p>Handles visitor counter logic.</p>
+    </div>
+
+    <div class="service-box">
+      <h4>DynamoDB</h4>
+      <p>Stores visitor count securely.</p>
+    </div>
+
+    <div class="service-box">
+      <h4>API Gateway</h4>
+      <p>Connects frontend with backend.</p>
+    </div>
+
+    <div class="service-box">
+      <h4>GitHub Actions</h4>
+      <p>Automates CI/CD pipeline.</p>
+    </div>
+  </div>
+</section>
+      <section class="architecture" id="architecture">
+  <h2 class="heading">Architecture</h2>
+
+  <p class="arch-desc">
+    Our Cloud Resume Challenge uses a serverless AWS architecture where
+    a static website is hosted on Amazon S3 and delivered using CloudFront.
+    A Lambda function integrated with API Gateway updates visitor count
+    stored in DynamoDB.
+  </p>
+
+  <div class="arch-image">
+    <img src="C:\final\AWS serverless architecture diagram.png" alt="AWS Architecture Diagram" />
+  </div>
+</section>
+      
+      <section id="features" class="features">
+        <h2 class="heading">Core Features</h2>
+        <div class="features-container">
+
+    <div class="feature-box">
+      <i class="bx bx-cloud"></i>
+      <h3>Static Website Hosting</h3>
+      <p>
+        Resume website is hosted on Amazon S3 with high availability and
+        scalability.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <i class="bx bx-server"></i>
+      <h3>Serverless Backend</h3>
+      <p>
+        Backend logic is implemented using AWS Lambda without managing servers.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <i class="bx bx-bar-chart-alt"></i>
+      <h3>Visitor Counter</h3>
+      <p>
+        DynamoDB stores visitor count which is updated through API Gateway
+        and Lambda.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <i class="bx bx-globe"></i>
+      <h3>Global Content Delivery</h3>
+      <p>
+        CloudFront ensures fast and secure delivery of the website worldwide.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <i class="bx bx-git-branch"></i>
+      <h3>CI/CD Automation</h3>
+      <p>
+        GitHub Actions automatically deploys frontend and backend code.
+      </p>
+    </div>
+
+    <div class="feature-box">
+      <i class="bx bx-shield-quarter"></i>
+      <h3>Secure & Scalable</h3>
+      <p>
+        IAM roles, HTTPS, and serverless services ensure security and scalability.
+      </p>
+    </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer class="footer">
+      <p class="copyright">
+        © 2025 | Cloud Resume Challenge – AWS Group Project
+      </p>
+    </footer>
+    
+    <script src="new.js"></script>
+  </body>
+</html>
