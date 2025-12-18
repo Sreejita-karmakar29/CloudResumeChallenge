@@ -1,289 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>My Portfolio</title>
 
+  <!-- ===== CSS ===== -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+    body{
+      background:#0f172a;
+      color:#e5e7eb;
+      line-height:1.6;
+    }
+    a{color:#38bdf8;text-decoration:none;}
+
+    /* Navbar */
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 8%;
+      background:#020617;
+      position:sticky;
+      top:0;
+    }
+    .navbar nav a{
+      margin-left:20px;
+      font-size:15px;
     }
 
-    body {
-      background: #0f172a;
-      color: #e5e7eb;
-      scroll-behavior: smooth;
+    /* Hero */
+    .hero{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:60px 8%;
+      flex-wrap:wrap;
     }
-
-    /* Header / Hero */
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
+    .hero-text h1 span{color:#38bdf8;}
+    .hero-text h2{margin:10px 0;color:#94a3b8;}
+    .buttons{margin-top:20px;}
+    .btn{
+      padding:10px 18px;
+      background:#38bdf8;
+      color:#020617;
+      border-radius:6px;
+      margin-right:10px;
+      display:inline-block;
     }
-
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
-      max-width: 1100px;
+    .btn.outline{
+      background:transparent;
+      border:1px solid #38bdf8;
+      color:#38bdf8;
     }
-
-    .hero-text {
-      flex: 1;
-    }
-
-    .hero-text h1 {
-      font-size: 3rem;
-      color: #38bdf8;
-    }
-
-    .hero-text h3 {
-      margin: 15px 0;
-      font-weight: 400;
-      color: #cbd5f5;
-    }
-
-    .hero-text p {
-      line-height: 1.7;
-      max-width: 500px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #38bdf8;
-      color: #0f172a;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #0ea5e9;
-    }
-
-    .hero-img {
-      flex: 1;
-      text-align: center;
-    }
-
-    .hero-img img {
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 6px solid #38bdf8;
-      box-shadow: 0 0 40px rgba(56,189,248,0.4);
+    .hero-img img{
+      width:260px;
+      border-radius:50%;
+      border:4px solid #38bdf8;
     }
 
     /* Sections */
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 50px;
-      color: #38bdf8;
-    }
+    section{padding:50px 8%;}
+    h2{margin-bottom:15px;color:#38bdf8;}
 
     /* Skills */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 20px;
-    }
-
-    .skill {
-      background: #1e293b;
-      padding: 20px;
-      text-align: center;
-      border-radius: 15px;
-      transition: 0.3s;
-    }
-
-    .skill:hover {
-      transform: translateY(-8px);
-      background: #38bdf8;
-      color: #0f172a;
+    .skill-box span{
+      display:inline-block;
+      background:#020617;
+      padding:8px 14px;
+      margin:6px;
+      border-radius:20px;
+      font-size:14px;
     }
 
     /* Projects */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
-
-    .project {
-      background: #1e293b;
-      padding: 25px;
-      border-radius: 20px;
-      transition: 0.3s;
-    }
-
-    .project:hover {
-      transform: scale(1.05);
+    .project-card{
+      background:#020617;
+      padding:15px;
+      margin:10px 0;
+      border-radius:8px;
     }
 
     /* Contact */
-    .contact form {
-      max-width: 500px;
-      margin: auto;
+	.social a {
+  font-size: 24px;
+  color: #38bdf8;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+      
+
+    footer{
+      text-align:center;
+      padding:15px;
+      background:#020617;
+      font-size:14px;
     }
 
-    .contact input,
-    .contact textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-      background: #1e293b;
-      color: #fff;
-    }
-
-    .contact button {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 25px;
-      background: #38bdf8;
-      color: #0f172a;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #94a3b8;
-    }
-
-    /* Animation */
-    .hidden {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: 0.8s;
-    }
-
-    .show {
-      opacity: 1;
-      transform: translateY(0);
+    /* Responsive */
+    @media(max-width:768px){
+      .hero{flex-direction:column;text-align:center;}
+      .hero-img{margin-top:20px;}
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="hero">
+  <!-- Navbar -->
+  <header class="navbar">
+    <h2 class="logo">Karra Lawanya</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
     <div class="hero-text">
-      <h1>Aritri Bose</h1>
-      <h3>Software Engineering Student</h3>
-      <p>
-        I design and build modern, responsive websites and applications with a
-        focus on clean UI and smooth user experience.
-      </p>
-      <a href="#contact" class="btn">Hire Me</a>
+      <h1>Hello, I'm <span>Lawanya</span></h1>
+      <h2>BCA Student | Frontend Developer</h2>
+      <div class="buttons">
+        <a href="#contact" class="btn">Get in Touch</a>
+        <a href="resume.pdf" download class="btn outline">Download Resume</a>
+      </div>
     </div>
-	
-	<div class="social">
-  <a href="https://www.instagram.com/aritribose05?igsh=eTJvNXA2ZDEyNmJj" target="_blank">
+    <div class="hero-img">
+      <img src="G:\My Drive\IMG-20250928-WA0012.jpg" alt="My Photo">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Motivated BCA student with hands-on experience in AWS cloud computing through internship.I specialize in building responsive and user friendly websites using HTML, CSS, JavaScript. I enjoy turning ideas into clean and functional web interfaces.
+	I'm constantly learning new technologies to improve my skills and stay updated with modern web development trends. my goal is to start my career as a Front-End developer and contribute to real-world projects while growing as a professional</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skill-box">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span>
+      <span>Python</span><span>C</span><span>Git & GitHub</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">Portfolio Website</div>
+    <div class="project-card">Resume Builder</div>
+    <div class="project-card">Cloud Resume Challenge</div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: lawanyakarra18012005@gmail.com</p>
+    <p>Phone: +91 8617780904</p>
+    <div class="social">
+  <a href="https://www.instagram.com/_lawanyaaaaa?igsh=MXN5NjByNjl0Y3BsMA"== target="_blank">
     <i class="fab fa-instagram"></i>
   </a>
-  <a href="https://www.linkedin.com/in/riya-bose-1a6a02371" target="_blank">
+
+  <a href="https://www.facebook.com/share/17SrGUno5x/ "target="_blank">
+    <i class="fab fa-facebook"></i>
+  </a>
+
+  <a href="https://www.linkedin.com/in/lawanya-karra-997116373" target="_blank">
     <i class="fab fa-linkedin"></i>
   </a>
 
-  <a href="https://github.com/AritriBose05" target="_blank">
+  <a href="https://github.com/lawanyakarra18012005-lab" target="_blank">
     <i class="fab fa-github"></i>
   </a>
 </div>
+  </section>
 
-    <div class="hero-img">
-      <img src="Profile_aritri.jpg" alt="Profile Picture" />
-    </div>
-  </div>
-</header>
+  <footer>
+    © 2025 Karra Lawanya | BCA Student
+  </footer>
 
-<section class="hidden">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">Java</div>
-    <div class="skill">SQL</div>
-  </div>
-</section>
-
-<section class="hidden">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>Stylish personal portfolio using HTML, CSS and JavaScript.</p>
-    </div>
-    <div class="project">
-      <h3>Cloud Resume Challange</h3>
-      <p>cloud resume challange using AWS.</p>
-    </div>
-    <div class="project">
-      <h3>Web Application</h3>
-      <p>Interactive web app with clean UI and animations.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact hidden">
-  <h2>Contact Me</h2>
-  <form onsubmit="return sendMessage()">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<footer>
-  <p>© 2025 Aritri Bose | Portfolio</p>
-</footer>
-
-<script>
-  function sendMessage() {
-    alert('Thank you! Your message has been sent.');
-    return false;
-  }
-
-  const hiddenElements = document.querySelectorAll('.hidden');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
+  <!-- JavaScript -->
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
     });
-  });
-
-  hiddenElements.forEach(el => observer.observe(el));
-</script>
+  </script>
 
 </body>
 </html>
-
