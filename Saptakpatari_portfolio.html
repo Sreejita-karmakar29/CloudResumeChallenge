@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #08171E;
+      color: #A1CCDC;
+      scroll-behavior: smooth;
+    }
+
+    /* Header / Hero */
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      max-width: 1100px;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      color: #38bdf8;
+    }
+
+    .hero-text h3 {
+      margin: 15px 0;
+      font-weight: 400;
+      color: #COCED1;
+    }
+
+    .hero-text p {
+      line-height: 1.7;
+      max-width: 500px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+    }
+
+    .hero-img {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-img img {
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 6px solid #38bdf8;
+      box-shadow: 0 0 40px rgba(56,189,248,0.4);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: #38bdf8;
+    }
+
+    /* Skills */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-8px);
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact */
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: #1e293b;
+      color: #fff;
+    }
+
+    .contact button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    /* Animation */
+    .hidden {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Saptak Patari</h1>
+      <h3>Software Engineering Student</h3>
+      <p>
+        I design and build modern, responsive websites and applications with a
+        focus on clean UI and smooth user experience.
+      </p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+	
+	<div class="social">
+  <a href="https://www.instagram.com/saptak.sonu?igsh=cGc5eDBxbTJvZW9j" target="_blank">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/saptak-patari-98a045310" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+  <a href="https://github.com/AritriBose05" target="_blank">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+
+    <div class="hero-img">
+      <img src="saptak.jpeg" />
+    </div>
+  </div>
+</header>
+
+<section class="hidden">
+  <h2>Skills</h2>
+  <div class="skills">
+   <div class="skill">PYTHON</div>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Java</div>
+    <div class="skill">SQL</div>
+	
+  </div>
+</section>
+
+<section class="hidden">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>Stylish personal portfolio using HTML, CSS and JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>Cloud Resume Challange</h3>
+      <p>cloud resume challange using AWS.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact hidden">
+  <h2>Contact Me</h2>
+  <form onsubmit="return sendMessage()">
+    <input type="text" placeholder="Your Name" required />
+	 <input type="text" placeholder="Your email" required />
+	<input type="email" placeholder="Your contact number" required />
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Saptak Patari | Portfolio</p>
+</footer>
+
+<script>
+  function sendMessage() {
+    alert('Thank you! Your message has been sent.');
+    return false;
+  }
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  hiddenElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
