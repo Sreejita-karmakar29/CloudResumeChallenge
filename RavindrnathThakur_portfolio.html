@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .profile img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+    }
+
+    .profile h1 {
+      font-size: 32px;
+    }
+
+    .profile p {
+      opacity: 0.8;
+    }
+
+    /* Social Icons */
+    .social-links a {
+      color: #fff;
+      font-size: 22px;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #ffd369;
+    }
+
+    /* Sections */
+    section {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+    }
+
+    section h2 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      border-bottom: 2px solid #ffd369;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    section p {
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .skill {
+      background: #ffd369;
+      color: #000;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ffd369;
+      color: #000;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #fff;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      opacity: 0.7;
+    }
+
+    @media(max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .social-links {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="profile">
+        <!-- Replace profile.jpg with your image -->
+        <img src="rnt.jpg"alt="Profile Picture">
+        <div>
+          <h1>Ravindranath Thakur</h1>
+          <p> I am a BCA Student| Web Designer </p>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ravindra-nath-thakur-36068b298" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ravindranath-22-m" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a passionate web developer who loves building clean and user-friendly websites. 
+        I enjoy learning new technologies and improving my skills every day.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">C Programming</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <p>✔ Portfolio Website<br>
+         ✔ Cloud Resume Challenge<br>
+         ✔ Simple JavaScript Apps</p>
+      <a href="#" class="btn">View More</a>
+    </section>
+	
+	<section id="contact" class="contact hidden">
+  <h2>Contact Me</h2>
+  <form onsubmit="return sendMessage()">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+	<input type="email" placeholder="Your phone number" required />
+    <textarea column ="8"  placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+    <footer>
+      <p>© 2025 Saptak Patari | Portfolio </p>
+    </footer>
+  </div>
+
+  <script>
+    // Simple JS animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach((section, index) => {
+        section.style.opacity = 0;
+        section.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          section.style.transition = '0.6s ease';
+          section.style.opacity = 1;
+          section.style.transform = 'translateY(0)';
+        }, index * 200);
+      });
+    });
+  </script>
+
+</body>
+</html>
