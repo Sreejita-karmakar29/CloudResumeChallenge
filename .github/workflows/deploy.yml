@@ -22,14 +22,4 @@ jobs:
 
       - name: Deploy files to S3
         run: |
-          aws s3 sync . s3://salasar-cloud-resume \
-            --delete \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
-            --cache-control "max-age=0,no-cache"
-
-      - name: Invalidate CloudFront
-        uses: aws-actions/aws-cloudfront-invalidate-cache@v2
-        with:
-          distribution-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          paths: "/*"
+          aws s3 sync . s3://salasar-cloud-resume --delete --exclude ".git/*" --exclude ".github/*" is there anything wrong in it
