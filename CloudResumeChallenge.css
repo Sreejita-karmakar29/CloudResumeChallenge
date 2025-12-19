@@ -1,4 +1,4 @@
-/* All your existing CSS from the user input is here... */
+
 
 /* --------------------
     TEAM MEMBERS (Added Button Style for consistency)
@@ -20,41 +20,6 @@
 }
 
 
-/* --------------------
-    RESUME MODAL/OVERLAY (NEW STYLES)
---------------------- */
-
-/* The Modal (the background) */
-.resume-modal {
-    /* Initially hidden by default, JS toggles 'display: flex' */
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #0f172a; /* Same as body background */
-    color: #e5e7eb;
-    margin: 50px auto; 
-    padding: 30px;
-    border: 2px solid #38bdf8; /* Highlight border */
-    border-radius: 10px;
-    width: 90%; 
-    max-width: 900px; 
-    position: relative;
-    box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
 
 /* Animation */
 @keyframes animatetop {
@@ -62,61 +27,6 @@
     to {top: 0; opacity: 1}
 }
 
-/* Close Button */
-.close-button {
-    color: #e5e7eb;
-    float: right;
-    font-size: 36px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: #38bdf8;
-}
-
-/* Resume Specific Styling */
-.resume-article h2 {
-    color: #38bdf8;
-    margin-bottom: 5px;
-    font-size: 2rem;
-}
-
-.resume-article h3 {
-    color: #0ea5e9;
-    border-bottom: 1px solid #1e293b;
-    padding-bottom: 5px;
-    margin-top: 20px;
-}
-
-.role-desc {
-    font-style: italic;
-    color: #cbd5f5;
-}
-
-/* Counter Footer */
-.visitor-foot {
-    margin-top: 30px;
-    padding-top: 15px;
-    border-top: 1px solid #1e293b;
-    text-align: right;
-    font-style: italic;
-    color: #94a3b8;
-}
-
-.visitor-foot span {
-    font-weight: bold;
-    color: #f97316; /* A contrasting color for the count */
-    font-size: 1.2em;
-}
-
-
-/* All your existing CSS from the user input continues below... */
 /* --------------------
     GLOBAL STYLES
 --------------------- */
@@ -235,7 +145,7 @@ section {
 }
 
 /* --------------------
-    AWS SERVICES (Was empty in user CSS, kept placeholder structure)
+    AWS SERVICES 
 --------------------- */
 .services-container {
   display: grid;
@@ -316,7 +226,7 @@ section {
 }
 
 /* --------------------
-    ARCHITECTURE (User's style was moved here)
+    ARCHITECTURE 
 --------------------- */
 .architecture {
   padding: 80px 10%;
@@ -345,7 +255,7 @@ section {
 }
 
 /* --------------------
-    FEATURES (User's style was moved here)
+    FEATURES 
 --------------------- */
 .features {
   padding: 80px 10%;
@@ -461,10 +371,7 @@ section {
     margin: 0; /* Remove default margin for better alignment */
 }
 
-/* You might also want to adjust the general modal-content for better spacing */
-.modal-content {
-    padding: 20px;
-}
+
 .social-icons a {
   margin: 0 8px;
   font-size: 20px;
@@ -475,3 +382,4 @@ section {
 .social-icons a:hover {
   color: #38bdf8;
 }
+
